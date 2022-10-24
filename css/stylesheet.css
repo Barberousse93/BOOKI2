@@ -1,0 +1,11 @@
+#main_page{
+    /* background: #F0F2F6; */
+    margin:auto;
+    width: auto;
+    max-width: 1400px;
+    /*min-width: 450px;*/
+    display: flex;
+    flex-direction: column;
+    font-family: Raleway, sans-serif;
+    padding: 10px;
+}

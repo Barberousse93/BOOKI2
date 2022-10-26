@@ -253,7 +253,7 @@ a:hover{
 #liste_populaires{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     background-color: #F2F2F2;
     border-radius: 25px;
     width: 25%;
@@ -284,7 +284,7 @@ a:hover{
 	box-shadow: 0px 0px 20px lightgray;
 	display: flex;
 	flex-direction: row;
-	width: 343px;
+	width: auto;
 	height: 144px;
 	border-radius: 20px;
 	border: 5px solid #FFFFFF;
@@ -298,7 +298,7 @@ a:hover{
 
 .photo_populaire{
     width: 137px;
-    height: 144px;
+    height: auto;
     border-radius:20px 0 0 20px ;
     object-fit: cover;
 }
@@ -421,7 +421,7 @@ a:hover{
     }
 
     .cartes_populaires_individuelles{
-        width: 252px;
+        width: auto;
         height: 144px;
     }
 
@@ -442,7 +442,7 @@ a:hover{
     }
 
     .legende{
-        font-size: 12px;
+        font-size: 16px;
         margin-top:5px;
     }
 }
@@ -514,7 +514,7 @@ a:hover{
     }
 
     .cartes_populaires_individuelles{
-        width: 334px;
+        width: 343px;
         height: 144px;
     }
 

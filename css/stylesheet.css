@@ -1,4 +1,4 @@
-#main_page {
+body {
     margin: auto;
     width: auto;
     max-width: 1400px;
@@ -8,16 +8,20 @@
     padding: 10px;
 }
 
+
 i {
+    /*Couleur des icones FA */
     color: #0065fc;
 }
 
 a {
+    /* suppression du soulignement des liens HT */
     text-decoration: none;
 }
 
 a:visited,
 a {
+    /* Les liens visités restent noirs */
     color: black;
 }
 
@@ -29,7 +33,9 @@ a:hover {
     cursor: pointer;
 }
 
+/* HEADER DEBUT */
 #en-tete {
+    /* affichage en ligne, éléments centrés verticalement*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -37,13 +43,19 @@ a:hover {
 }
 
 #en-tete a {
+    /* liens de l'en-tête avec border 2px pour éviter l'effet de descente du texte au survol */
     margin-left: 5px;
     margin-right: 5px;
+    padding: 10px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     color: black;
 }
 
 #en-tete a:hover {
-    border-top: 5px solid #0065fc;
+    /* ligne bleue au dessus */
+    border-top: 2px solid #0065fc;
+    border-bottom: 2px solid transparent;
     color: #0065fc;
 }
 
@@ -54,6 +66,7 @@ a:hover {
 }
 
 #navigation {
+    /* affichage en ligne cadré en bout de ligne*/
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -64,7 +77,11 @@ a:hover {
     width: 80%;
 }
 
+/* HEADER FIN */
+
+/* ZONE DE RECHERCHE DEBUT*/
 #recherche {
+    /* alignement en ligne*/
     position: relative;
     display: flex;
     flex-direction: row;
@@ -73,6 +90,7 @@ a:hover {
 }
 
 #cadre_position {
+    /*Cadre pour l'icone de positionnement GPS*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +102,7 @@ a:hover {
 }
 
 #zone_saisie {
+    /* zone de saisie qui contient l'input box*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,26 +140,35 @@ a:hover {
     box-shadow: 10px 10px 15px lightgray;
 }
 
+/*ZONE DE RECHERCHE FIN*/
+
+/*FILTRES DEBUT*/
 #filtres {
+    /* afichage en ligne avec retour à la ligne si pas assez de largeur*/
     width: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
 
+#libelle_filtre {
+    font-size: 20px;
 }
 
 #conteneur_boutons_filtres {
+    /*affichage en ligne*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .bouton_filtre {
+    /*Format des boutons filtre */
     height: 48px;
     border: 2px solid #D9D9D9;
-    border-radius: 25px;
+    border-radius: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -150,11 +178,13 @@ a:hover {
 }
 
 .bouton_filtre:hover {
+    /* au survol, changement de couleur et ombre portée */
     background-color: #DEEBFF;
     box-shadow: 10px 10px 15px lightgray;
 }
 
 .bouton_filtre i {
+    /* décalage de l'icone du bouton filtre*/
     margin-right: 2px;
 }
 
@@ -174,7 +204,11 @@ a:hover {
     margin: 0 0 0 5px;
 }
 
+/*FILTRES FIN*/
+
+/* HEBERGEMENTS DEBUT */
 #hebergements {
+    /* affichage en ligne sections hébergement et populaires */
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -183,7 +217,10 @@ a:hover {
 
 }
 
+/*LISTES HEBERGEMENTS DEBUT*/
 #liste_hebergements {
+    /* conteneur titres plus ensembles des cartes */
+    /* affichage en colonne */
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
@@ -193,6 +230,7 @@ a:hover {
 }
 
 #cartes_hebergement {
+    /* conteneur ensemble des cartes */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -203,6 +241,8 @@ a:hover {
 }
 
 .carte_hebergement_unitaire {
+    /* carte */
+    /* affichage des composants en colonne */
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
@@ -215,10 +255,12 @@ a:hover {
 }
 
 .carte_hebergement_unitaire:hover {
+    /* au survol, ombre portée */
     box-shadow: 10px 10px 15px lightgray;
 }
 
 .photo_hebergement {
+    /* dimensionnement des photos */
     width: 246px;
     height: 124px;
     border-radius: 20px 20px 0px 0px;
@@ -231,9 +273,20 @@ a:hover {
 }
 
 .classement {
+    /* zone classement "etoiles" */
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
+}
+
+.classement i.active {
+    /* affichage différencié étoile active */
+    color: blue;
+}
+
+.classement i.inactive {
+    /* affichage différencié étoile inactive */
+    color: lightgrey
 }
 
 #afficher_plus {
@@ -241,7 +294,11 @@ a:hover {
     font-weight: bold;
 }
 
+/*LISTE HEBERGEMENTS FIN*/
+
+/*LISTE POPULAIRES DEBUT*/
 #liste_populaires {
+    /*conteneur titre et ensemble des cartes populaire*/
     display: flex;
     flex-direction: column;
     background-color: #F2F2F2;
@@ -258,11 +315,13 @@ a:hover {
 }
 
 #header_populaires i {
+    /* poistionnement de l'icone "chart" */
     margin-top: 18.72px;
     margin-bottom: 18.72px;
 }
 
 #cartes_populaires {
+    /* ensemble des cartes populaire */
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -270,6 +329,8 @@ a:hover {
 }
 
 .cartes_populaires_individuelles {
+    /* carte */
+    /* affichage en ligne */
     background-color: #FFFFFF;
     box-shadow: 0px 0px 20px lightgray;
     display: flex;
@@ -283,10 +344,12 @@ a:hover {
 }
 
 .cartes_populaires_individuelles:hover {
+    /* au survol, ombre portée */
     box-shadow: 10px 10px 15px lightgray;
 }
 
 .photo_populaire {
+    /* Dommensionnment photo */
     width: 137px;
     height: auto;
     border-radius: 20px 0 0 20px;
@@ -300,7 +363,12 @@ a:hover {
     padding-left: 5px;
 }
 
+/*LISTE POPULAIRES FIN*/
+/*HEBERGEMENTS FIN*/
+
+/*LISTE ACTIVITES DEBUT*/
 #activites {
+    /* conteneur titre et cartes activités */
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -312,6 +380,8 @@ a:hover {
 }
 
 #cartes_activites {
+    /* ensemble des cartes activités */
+    /* alignement en ligne avec passage à la ligne si besoin*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -324,6 +394,8 @@ a:hover {
 }
 
 .cartes_activites_individuelles {
+    /* cartes */
+    /* affichage en colonne */
     width: 302px;
     height: 445px;
     display: flex;
@@ -333,11 +405,13 @@ a:hover {
     box-shadow: 0 0 10px lightgray;
 }
 
-.cartes_activites_individuelles a:hover {
+.cartes_activites_individuelles:hover {
+    /* au survol, ombre portée */
     box-shadow: 10px 10px 15px lightgray;
 }
 
 .photo_activite {
+    /* dimensionnmeent photo */
     width: 302px;
     height: 386px;
     border-radius: 20px 20px 0 0;
@@ -351,6 +425,9 @@ a:hover {
     margin-bottom: 5px;
 }
 
+/*LISTE ACTIVITES FIN*/
+
+/*FOOTER DEBUT*/
 #pied_de_page {
     margin-top: 10px;
     display: flex;
@@ -371,7 +448,12 @@ a:hover {
     margin-bottom: 10px;
 }
 
+/*FOOTER FIN*/
+
+/*MEDIA QUERIES DEBUT*/
+
 @media (max-width: 1200px) {
+    /*Ecran jusquà 1200px de large*/
 
     .cartes_populaires_individuelles {
         height: auto;
@@ -389,11 +471,12 @@ a:hover {
 }
 
 
-@media (max-width: 992px) and (min-width:768px) {
+@media (max-width: 992px) {
+    /*Ecran jusquà 992px de large*/
 
     #en-tete a:hover {
-        border-bottom: 5px solid #0065fc;
-        border-top: 0;
+        border-bottom: 2px solid #0065fc;
+        border-top: 2px solid transparent;
     }
 
     #navigation {
@@ -446,6 +529,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    /*Ecran jusquà 768px de large*/
 
     #en-tete {
         flex-direction: column;
@@ -455,8 +539,8 @@ a:hover {
     }
 
     #en-tete a:hover {
-        border-bottom: 5px solid #0065fc;
-        border-top: 0;
+        border-bottom: 2px solid #0065fc;
+        border-top: 2px solid transparent;
     }
 
     #logo {
@@ -574,6 +658,8 @@ a:hover {
 }
 
 @media (max-width: 430px) {
+
+    /*Ecran jusquà 430px de large*/
     .bouton_filtre {
         width: 100px;
         height: 30px;
